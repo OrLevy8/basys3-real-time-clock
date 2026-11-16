@@ -10,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 <p align="center">
-  <img src="docs/assets/hardware_demo.gif" alt="Real-Time Clock Live Execution on Digilent Basys 3 & Pmod SSD" width="100%">
+  <img src="docs/assets/hardware_demo_running.jpg" alt="Real-Time Clock Running on Digilent Basys 3 & Pmod SSD" width="100%">
   <br>
   <em><b>Real-Time Clock physically running on hardware:</b> Digilent Basys 3 onboard 7-segment display shows Hours and Minutes (<b>14:15</b>), while the Digilent Pmod SSD displays Seconds (<b>25</b>).</em>
 </p>
@@ -26,7 +26,7 @@
 6. [Pinout & FPGA Constraints](#-pinout--fpga-constraints)
 7. [Simulation & Verification](#-simulation--verification)
 8. [Synthesis & Implementation Results](#-synthesis--implementation-results)
-9. [Hardware Demonstration Video](#-hardware-demonstration-video)
+9. [Hardware Demonstration & Physical Execution](#-hardware-demonstration--physical-execution)
 
 ---
 

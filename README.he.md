@@ -10,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 <p align="center">
-  <img src="docs/assets/hardware_demo.gif" alt="שעון זמן אמת בפעולה על Basys 3 ו-Pmod SSD" width="100%">
+  <img src="docs/assets/hardware_demo_running.jpg" alt="שעון זמן אמת פועל על Basys 3 ו-Pmod SSD" width="100%">
   <br>
   <em><b>מערכת השעון בפעולה על גבי החומרה:</b> 4 ספרות ה-7-Segment שעל כרטיס ה-Basys 3 מציגות שעות ודקות (<b>14:15</b>), ורכיב ההרחבה Pmod SSD מציג שניות (<b>25</b>). נורית ה-DONE דולקת ומעידה על צריבה תקינה של ה-FPGA.</em>
 </p>
