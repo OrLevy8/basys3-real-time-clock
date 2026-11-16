@@ -10,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 <p align="center">
-  <img src="docs/assets/hardware_demo_running.jpg" alt="Real-Time Clock Running on Digilent Basys 3 & Pmod SSD" width="100%">
+  <img src="docs/assets/hardware_demo.gif" alt="Real-Time Clock Live Execution on Digilent Basys 3 & Pmod SSD" width="100%">
   <br>
   <em><b>Real-Time Clock physically running on hardware:</b> Digilent Basys 3 onboard 7-segment display shows Hours and Minutes (<b>14:15</b>), while the Digilent Pmod SSD displays Seconds (<b>25</b>).</em>
 </p>
@@ -104,9 +104,8 @@ basys3-real-time-clock/
 │   ├── Ex05-Real_Clock-Part3-BOARD.pdf  # Board implementation guidelines
 │   ├── final_report.pdf                 # Final lab report with experimental results
 │   ├── prep_report.pdf                  # Preliminary design calculations report
-│   ├── board_video_link.md              # Hardware demonstration details & video link
 │   └── assets/                          # Architecture schematics, waveforms & photos
-│       ├── hardware_demo_running.jpg    # Photo of real hardware operating
+│       ├── hardware_demo.gif    # Photo of real hardware operating
 │       ├── architecture_block_diagram.jpg
 │       ├── sim_waveform_exp1_load.png
 │       ├── sim_waveform_exp1_counting.png
@@ -309,20 +308,17 @@ The design was synthesized and implemented for the **Artix-7 XC7A35T** using **X
 The system was deployed, programmed, and experimentally verified on actual hardware:
 
 <p align="center">
-  <img src="docs/assets/hardware_demo_running.jpg" alt="Physical Hardware Running" width="100%">
+  <img src="docs/assets/hardware_demo.gif" alt="Physical Hardware Running" width="100%">
   <br>
-  <em><b>Live Execution:</b> Clock display showing <code>14:15:25</code> (Basys 3 onboard digits: <code>14:15</code>, Pmod SSD: <code>25</code>). Note the illuminated green <code>DONE</code> LED indicating successful FPGA bitstream programming.</em>
+  <em><b>Live Execution:</b> 24-hour real-time clock running synchronously on the Digilent Basys 3 (Hours and Minutes on onboard display) and Digilent Pmod SSD (Seconds).</em>
 </p>
 
-### Key Hardware Verification Highlights
+### Key Hardware Verification Highlights:
 1. **Clock Display Breakdown:**
-   - **Hours & Minutes:** `14:15` rendered via active-low common-anode time-division multiplexing on the 4-digit onboard display.
-   - **Seconds:** `25` rendered via active-high common-cathode time-division multiplexing on the Digilent Pmod SSD.
+   - **Hours & Minutes:** Rendered via active-low common-anode time-division multiplexing on the 4-digit onboard display.
+   - **Seconds:** Rendered via active-high common-cathode time-division multiplexing on the Digilent Pmod SSD.
 2. **FPGA Configuration:**
    - Bitstream programmed over USB-JTAG using Vivado Hardware Manager.
-   - Status confirmed by the green `DONE` LED (LD19).
+   - Status confirmed by the illuminated green `DONE` LED.
 3. **Interactive Control:**
-   - Inputs read from slide switches SW0-SW7 and push buttons `LOAD`, `RESET`, `TESTMODE`.
-4. **Demonstration Video:**
-   - 🔗 **Full Video Link:** [Basys 3 Real-Time Clock Hardware Demo (SharePoint)](https://gjctacil-my.sharepoint.com/:v:/g/personal/orlev_g_jct_ac_il/EeOraA01wDtKiLFiv6LwWPYBSL3SGPeE2fRB4Dj4Snh_vQ?e=jtXFVR)
-   - Demonstrates minute rollovers (e.g. `09:35:54` $\rightarrow$ `09:36:00`), midnight rollover (`23:59:54` $\rightarrow$ `00:00:00`), and real-time vs. test-mode clock scaling.
+   - Inputs configured using slide switches SW0-SW7 and push buttons `LOAD`, `RESET`, `TESTMODE`.

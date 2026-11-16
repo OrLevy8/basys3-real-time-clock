@@ -10,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 <p align="center">
-  <img src="docs/assets/hardware_demo_running.jpg" alt="שעון זמן אמת פועל על Basys 3 ו-Pmod SSD" width="100%">
+  <img src="docs/assets/hardware_demo.gif" alt="שעון זמן אמת בפעולה על Basys 3 ו-Pmod SSD" width="100%">
   <br>
   <em><b>מערכת השעון בפעולה על גבי החומרה:</b> 4 ספרות ה-7-Segment שעל כרטיס ה-Basys 3 מציגות שעות ודקות (<b>14:15</b>), ורכיב ההרחבה Pmod SSD מציג שניות (<b>25</b>). נורית ה-DONE דולקת ומעידה על צריבה תקינה של ה-FPGA.</em>
 </p>
@@ -307,18 +307,15 @@ flowchart TD
 
 ## 🎥 הדגמה חיה על גבי החומרה
 
-המערכת נצרבה והופעלה בהצלחה על כרטיס ה-Basys 3 הפיזי:
+המערכת נצרבה ואומתה בהצלחה על גבי כרטיס ה-FPGA:
 
 <p align="center">
-  <img src="docs/assets/hardware_demo_running.jpg" alt="המערכת פועלת על הבורד" width="100%">
+  <img src="docs/assets/hardware_demo.gif" alt="הדגמה חיה על גבי החומרה" width="100%">
   <br>
-  <em><b>תמונת פעולה אמיתית:</b> השעון מציג <code>14:15:25</code> (שעות ודקות: <code>14:15</code>, שניות: <code>25</code>). נורית ה-DONE הירוקה מאשרת תכנות מוצלח של ה-FPGA.</em>
+  <em><b>השעון בפעולה:</b> ספירה סינכרונית של שעות, דקות ושניות על גבי תצוגת ה-Basys 3 הפנימית וה-Pmod SSD החיצוני. נורית ה-DONE דולקת ומעידה על פעולת FPGA תקינה.</em>
 </p>
 
-- 🔗 **קישור ישיר לסרטון ההדגמה:** [סרטון ביצוע על כרטיס Basys 3 (ב-SharePoint)](https://gjctacil-my.sharepoint.com/:v:/g/personal/orlev_g_jct_ac_il/EeOraA01wDtKiLFiv6LwWPYBSL3SGPeE2fRB4Dj4Snh_vQ?e=jtXFVR)
-- **נקודות מרכזיות המודגמות בסרטון:**
-  1. צריבת קובץ ה-Bitstream דרך Vivado Hardware Manager.
-  2. כיוון שעה יזום בעזרת המפסקים וכפתור הטעינה.
-  3. מעבר דקות אוטומטי (`09:35:54` $\rightarrow$ `09:36:00`).
-  4. מעבר חצות אוטומטי (`23:59:54` $\rightarrow$ `00:00:00`).
-  5. מעבר בין מצב בדיקה מהיר (`TESTMODE=1`) למצב שעון רגיל.
+### דגשים עיקריים באימות החומרה:
+1. **חלוקת תצוגה:** שעות ודקות מרובבות על גבי 4 ספרות ה-Basys 3 (אנודה משותפת), שניות מרובבות על גבי ה-Pmod SSD (קתודה משותפת).
+2. **צריבת רכיב:** קובץ ה-Bitstream נצרב דרך Vivado Hardware Manager בעזרת כבל USB-JTAG.
+3. **שליטה ובקרה:** כיוון והזנת זמנים התבצעו בעזרת המפסקים והכפתורים בהתאם לתכן.

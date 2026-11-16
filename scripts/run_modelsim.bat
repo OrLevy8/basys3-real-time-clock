@@ -6,7 +6,7 @@ REM ============================================================================
 echo [INFO] Starting ModelSim Simulation...
 cd /d "%~dp0..\tb"
 
-if exist "..\tb\sim_exp1.do" (
+if exist "sim_exp1.do" (
     vsim -do sim_exp1.do
 ) else (
     vsim -do do.do
