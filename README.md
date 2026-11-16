@@ -1,5 +1,10 @@
 # 24-Hour Real-Time Digital Clock on Basys 3 FPGA (VHDL)
 
+<p align="center">
+  <a href="README.md"><b>English 🇬🇧</b></a> | 
+  <a href="README.he.md"><b>עברית 🇮🇱</b></a>
+</p>
+
 [![Language: VHDL](https://img.shields.io/badge/Language-VHDL--93-blue.svg)](src/)
 [![FPGA: Artix-7](https://img.shields.io/badge/FPGA-Xilinx%20Artix--7%20XC7A35T-red.svg)](constrs/basys3_master.xdc)
 [![Board: Digilent Basys 3](https://img.shields.io/badge/Board-Digilent%20Basys%203-orange.svg)](https://digilent.com/reference/programmable-logic/basys-3/start)
