@@ -1,6 +1,6 @@
 # 24-Hour Real-Time Digital Clock on Basys 3 FPGA (VHDL)
 
-> 🇮🇱 **מחפשים את התיעוד בעברית?** [לחצו כאן לקריאת ה-README המלא בעברית](README.he.md)
+> Language / שפה: [English](README.md) • [עברית (Hebrew)](README.he.md)
 
 [![Language: VHDL](https://img.shields.io/badge/Language-VHDL--93-blue.svg)](src/)
 [![FPGA: Artix-7](https://img.shields.io/badge/FPGA-Xilinx%20Artix--7%20XC7A35T-red.svg)](constrs/basys3_master.xdc)

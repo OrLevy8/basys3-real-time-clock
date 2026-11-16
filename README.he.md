@@ -1,6 +1,6 @@
 # שעון זמן אמת בן 24 שעות על גבי FPGA Basys 3 (בשפת VHDL)
 
-> 🇬🇧 **Looking for English documentation?** [Click here to view the full README in English](README.md)
+> Language / שפה: [English](README.md) • [עברית (Hebrew)](README.he.md)
 
 [![Language: VHDL](https://img.shields.io/badge/Language-VHDL--93-blue.svg)](src/)
 [![FPGA: Artix-7](https://img.shields.io/badge/FPGA-Xilinx%20Artix--7%20XC7A35T-red.svg)](constrs/basys3_master.xdc)
