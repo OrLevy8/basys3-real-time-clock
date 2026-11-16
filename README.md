@@ -6,6 +6,12 @@
 [![EDA: Vivado 2020.1](https://img.shields.io/badge/EDA-Vivado%202020.1-brightgreen.svg)](scripts/build_vivado.tcl)
 [![Simulation: ModelSim](https://img.shields.io/badge/Simulation-ModelSim%20%2F%20Questa-purple.svg)](tb/)
 
+<p align="center">
+  <img src="docs/assets/hardware_demo_running.jpg" alt="Real-Time Clock Running on Digilent Basys 3 & Pmod SSD" width="750">
+  <br>
+  <em><b>Real-Time Clock physically running on hardware:</b> Digilent Basys 3 onboard 7-segment display shows Hours and Minutes (<b>14:15</b>), while the Digilent Pmod SSD displays Seconds (<b>25</b>).</em>
+</p>
+
 ---
 
 ## 📋 Table of Contents
@@ -243,16 +249,28 @@ The design was fully synthesized and implemented for the **Artix-7 XC7A35T** usi
 
 ---
 
-## 🎥 Hardware Demonstration Video
+## 🎥 Hardware Demonstration & Physical Execution
 
-The system was physically deployed and validated on real hardware:
-- 🔗 **Video Demonstration Link:** [Basys 3 Real-Time Clock Hardware Demo](https://gjctacil-my.sharepoint.com/:v:/g/personal/orlev_g_jct_ac_il/EeOraA01wDtKiLFiv6LwWPYBSL3SGPeE2fRB4Dj4Snh_vQ?e=jtXFVR)
-- **Documented Procedures:**
-  1. Bitstream download via Vivado Hardware Manager.
-  2. Setting arbitrary clock values via switches & load button.
-  3. Minute rollover transition (`09:35:54` $\rightarrow$ `09:36:00`).
-  4. 24-Hour midnight rollover transition (`23:59:54` $\rightarrow$ `00:00:00`).
-  5. Rapid verification utilizing `TESTMODE` toggle.
+The system was deployed, programmed, and experimentally verified on actual hardware:
+
+<p align="center">
+  <img src="docs/assets/hardware_demo_running.jpg" alt="Physical Hardware Running" width="750">
+  <br>
+  <em><b>Live Execution:</b> Clock display showing <code>14:15:25</code> (Basys 3 onboard digits: <code>14:15</code>, Pmod SSD: <code>25</code>). Note the illuminated green <code>DONE</code> LED indicating successful FPGA bitstream programming.</em>
+</p>
+
+### Key Hardware Verification Highlights
+1. **Clock Display Breakdown:**
+   - **Hours & Minutes:** `14:15` rendered via active-low common-anode time-division multiplexing on the 4-digit onboard display.
+   - **Seconds:** `25` rendered via active-high common-cathode time-division multiplexing on the Digilent Pmod SSD.
+2. **FPGA Configuration:**
+   - Bitstream programmed over USB-JTAG using Vivado Hardware Manager.
+   - Status confirmed by the green `DONE` LED (LD19).
+3. **Interactive Control:**
+   - Inputs read from slide switches SW0-SW7 and push buttons `LOAD`, `RESET`, `TESTMODE`.
+4. **Demonstration Video:**
+   - 🔗 **Full Video Link:** [Basys 3 Real-Time Clock Hardware Demo (SharePoint)](https://gjctacil-my.sharepoint.com/:v:/g/personal/orlev_g_jct_ac_il/EeOraA01wDtKiLFiv6LwWPYBSL3SGPeE2fRB4Dj4Snh_vQ?e=jtXFVR)
+   - Demonstrates minute rollovers (e.g. `09:35:54` $\rightarrow$ `09:36:00`), midnight rollover (`23:59:54` $\rightarrow$ `00:00:00`), and real-time vs. test-mode clock scaling.
 
 ---
 

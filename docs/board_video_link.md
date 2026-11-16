@@ -1,6 +1,10 @@
-# Hardware Demonstration Video
+# Hardware Demonstration & Physical Execution
 
-This document contains the recording and demonstration details for the Real-Time Clock implemented on the Digilent Basys 3 FPGA board.
+This document details the physical setup and recording for the Real-Time Clock implemented on the Digilent Basys 3 FPGA board with Digilent Pmod SSD.
+
+## Live Hardware Execution Photo
+![Hardware Running](../docs/assets/hardware_demo_running.jpg)
+*Figure: The real-time clock running at 14:15:25 on the Basys 3 FPGA and Pmod SSD.*
 
 ## Video Access Link
 - **SharePoint Link:** [Basys 3 Real-Time Clock Hardware Demonstration](https://gjctacil-my.sharepoint.com/:v:/g/personal/orlev_g_jct_ac_il/EeOraA01wDtKiLFiv6LwWPYBSL3SGPeE2fRB4Dj4Snh_vQ?e=jtXFVR)
@@ -9,8 +13,9 @@ This document contains the recording and demonstration details for the Real-Time
 1. **FPGA Bitstream Programming:**
    - Loading the bitstream via Vivado Hardware Manager.
    - Initial reset state and default display activation.
+   - Green `DONE` LED verification.
 2. **Time Setting via Switches & Buttons:**
-   - Selecting target register (`ADDRS[1:0]`): Hours, Minutes, Seconds.
+   - Selecting target register (`ADDRS[1:0]`): Hours (`00`), Minutes (`01`), Seconds (`10`).
    - Configuring target value (`DATA_IN[5:0]`) via slide switches SW2-SW7.
    - Strobe loading with button `LOAD` (btnL).
 3. **Minute Rollover Verification:**
